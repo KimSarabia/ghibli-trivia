@@ -10,15 +10,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: '/html/home.html',
       controller: 'homeCtrl'
     })
-    .state('list', {
-      url: '/list',
-      templateUrl: '/html/list.html',
-      controller: 'listCtrl'
-    })
-    .state('detail', {
-      url: '/detail/:id',
-      templateUrl: '/html/detail.html',
-      controller: 'detailCtrl'
+    .state('dashboard', {
+      url: '/detail/dashboard',
+      templateUrl: '/html/dashboard.html',
+      controller: 'dashCtrl'
     })
   $urlRouterProvider.otherwise('/');
 });

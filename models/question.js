@@ -3,8 +3,9 @@
 var mongoose = require('mongoose');
 
 var Question = mongoose.model('Question', {
-  species: String,
-  age: Number
+  question: String,
+  answer: String,
+  category: String
 });
 
 module.exports = Question;

@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Angular</title>
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css">
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css">
 
-  <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 
-  <script src="/bower_components/angular/angular.min.js"></script>
-  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="/bower_components/ngSweetAlert/SweetAlert.min.js"></script>
-  <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+    <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
 
-  <script src="/js/module.js"></script>
-  <script src="/js/controllers.js"></script>
-  <script src="/js/services.js"></script>
+    <script src="/js/module.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script src="/js/services.js"></script>
 </head>
 
 <body ng-app='routerApp'>
-  <!-- navbar?? -->
-<h1>GHIBLI QUIZ</h1>
-  <div>
-    <button ui-sref='home'>Home</button>
-    <button ui-sref='list'>List</button>
-    <button ui-sref='detail'>Detail</button>
-  </div>
 
-  <!-- Where the templates go! -->
-  <ui-view></ui-view>
-  <!--  -->
+
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref="home">Ghibli Trivia</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ui-sref='dashboard'>Dashboard</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- NAVBAR END -->
+
+
+    <h1>GHIBLI QUIZ</h1>
+    <div>
+        <button ui-sref='home'>Home</button>
+        <button ui-sref='dashboard'>Dashboard</button>
+    </div>
+
+    <!-- Where the templates go! -->
+    <ui-view></ui-view>
+    <!--  -->
 
 </body>
+
 </html>
