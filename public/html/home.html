@@ -1,31 +1,32 @@
-<h1>HOME</h1>
+<h1>Test Your Studio Ghibli Knowledge!</h1>
+<!-- TOTORO START -->
+<br>
+<br>
+<br>
+<div class="totoro-wrapper">
+  <div class="totoro"></div>
+</div>
+<!-- TOTORO END -->
+<br>
+<br>
+<br>
+<br>
 
 <table class="table">
     <thead>
         <tr>
-            <!-- <th>ID</th> -->
-            <th>
-                <button ng-click="order('id')">ID</button>
-                <span class="sortorder" ng-show="predicate === 'id'"></span>
-            </th>
-
             <th>
                 <button ng-click="order('question')">Question</button>
                 <span class="sortorder" ng-show="predicate === 'name'"></span>
             </th>
             <th>
-                <button ng-click="order('answer')">Answer</button>
-                <span class="sortorder" ng-show="predicate === 'answer'"></span>
-            </th>
-            <th>
                 <button ng-click="order('category')">Category</button>
                 <span class="sortorder" ng-show="predicate === 'amount'" ng-class="{reverse:reverse}"></span>
             </th>
-
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat='quest in questions  | orderBy:sortType:sortReverse | filter:searchFilter'>
+        <tr ng-repeat='quest in questions'>
             <td>{{quest.question}}</td>
             <td>{{quest.category}}</td>
         </tr>
