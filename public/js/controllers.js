@@ -13,13 +13,23 @@ app.controller('homeCtrl', function($scope, QuestionService) {
             console.error('err:', err);
         });
 
+
 });
 
 app.controller('dashCtrl', function($scope, QuestionService) {
     console.log('dashCtrl!');
+
     $scope.addNewQuestion = function(input) {
         QuestionService.create(input);
         QuestionService.getAll();
     }
+
+    $scope.deleteQuestion = function(input) {
+    console.log(input.quest);
+    QuestionService.delete(input.quest);
+    QuestionService.getAll();
+}
+
+
 
 });

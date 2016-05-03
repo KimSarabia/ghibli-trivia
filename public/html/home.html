@@ -23,12 +23,16 @@
                 <button ng-click="order('category')">Category</button>
                 <span class="sortorder" ng-show="predicate === 'amount'" ng-class="{reverse:reverse}"></span>
             </th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat='quest in questions'>
             <td>{{quest.question}}</td>
             <td>{{quest.category}}</td>
+            <td>
+              <a ng-click="deleteQuestion(this)">Delete</a>
+            </td>
         </tr>
     </tbody>
 </table>

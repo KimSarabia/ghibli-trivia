@@ -18,12 +18,24 @@ app.service('QuestionService', function($http) {
         });
     };
 
-    this.update = function(questionId, updateObj) {
-        return $http.put(`/api/questions/${questionId}`, updateObj);
+    this.update = (editQuestion) => {
+        $http.put(`/api/questions/${editQuestion.id}`, editQuestion).then(res => {
+            console.log("success");
+        }, err => {
+            if (err) {
+                console.log(err);
+            }
+        });
     };
 
-    this.delete = function(questionId, updateObj) {
-        return $http.delete(`/api/questions/${questionId}`, deleteObj);
+    this.delete = (deleteQuestion) => {
+        $http.put(`/api/questions/${deleteTransaction.id}`, deleteTransaction).then(res => {
+            console.log("success");
+        }, err => {
+            if (err) {
+                console.log(err);
+            }
+        });
     };
 
 });
