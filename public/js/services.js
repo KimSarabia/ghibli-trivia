@@ -8,8 +8,14 @@ app.service('QuestionService', function($http) {
         return $http.get('/api/questions');
     };
 
-    this.create = function(question) {
-        return $http.post('/api/questions', question);
+    this.create = (newQuestion) => {
+        $http.post('/api/questions', newQuestion).then(res => {
+            console.log("success");
+        }, err => {
+            if (err) {
+                console.log(err);
+            }
+        });
     };
 
     this.update = function(questionId, updateObj) {

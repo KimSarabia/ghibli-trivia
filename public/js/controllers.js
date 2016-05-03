@@ -17,11 +17,9 @@ app.controller('homeCtrl', function($scope, QuestionService) {
 
 app.controller('dashCtrl', function($scope, QuestionService) {
     console.log('dashCtrl!');
+    $scope.addNewQuestion = function(input) {
+        QuestionService.create(input);
+        QuestionService.getAll();
+    }
 
-    QuestionService.create()
-        .then(function(res) {
-            $scope.questions = res.data;
-        }, function(err) {
-            console.error('err:', err);
-        });
 });

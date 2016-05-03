@@ -1,35 +1,37 @@
-
 <!-- FORM START -->
-<header>
-  <h1>Add Question</h1>
-</header>
-<section>
-  <div class="arrow-up"></div>
-  <form id="contact" class="form-horizontal" role="form">
-    <div class="form-group">
-      <div class="col-sm-12">
-        <input id="question" name="question" type="text" placeholder="QUESTION" class="form-control">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-12">
-        <input id="answer" name="answer" type="answer" placeholder="ANSWER" class="form-control">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-12">
-        <input id="category" name="category" type="category" placeholder="CATEGORY" class="form-control">
-      </div>
-    </div>
-    <button id="send" name="send" class="btn btn-block">Add Question</button>
-  </form>
-</section>
-<!-- FORM END -->
+<div class = "addNewQuestion">
+    <header>
+        <h1>Add Question</h1>
+    </header>
+    <section>
+        <div class="arrow-up"></div>
+        <form name="addNew" class="form-horizontal" role="form">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input id="question" name="question" type="text" placeholder="QUESTION" class="form-control" ng-model="newQuestion.question">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input id="answer" name="answer" type="answer" placeholder="ANSWER" class="form-control" ng-model="newQuestion.answer">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input id="category" name="category" type="category" placeholder="CATEGORY" class="form-control" ng-model="newQuestion.category">
+                </div>
+            </div>
+            <button id="send" name="send" ng-click ="addNewQuestion(newQuestion)" class="btn btn-block">Add Question</button>
+        </form>
+    </section>
+    <!-- FORM END -->
+</div>
+
 <br>
 <br>
 <br>
 <!-- TOTORO START -->
 <div class="totoro-wrapper">
-  <div class="totoro"></div>
+    <div class="totoro"></div>
 </div>
 <!-- TOTORO END -->
